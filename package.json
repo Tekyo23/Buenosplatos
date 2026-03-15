@@ -1,0 +1,13 @@
+{
+  "name": "tarea_semanal_sergio-pedro",
+  "version": "0.0.1",
+  "description": "Web desarrollada para las tareas semanales del bloque web de la asignatura Comunicación Persona-Máquina",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sergio Pedro Lombao",
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.0"
+}
