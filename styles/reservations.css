@@ -1,0 +1,54 @@
+/* Schedule */
+#timetable {
+    width: 85%;
+    margin-inline: auto;
+    text-align: center;
+    border: .25rem solid #704016;
+    border-radius: .3rem
+}
+
+/* Reservations */
+#reservations-form {
+    display: grid;
+    row-gap: 1.25rem;
+    margin-inline: auto;
+    max-width: 40%;
+}
+
+#reservations-form > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    box-sizing: border-box;
+}
+
+#reservations-form > div:has(input:required) label::after { /* This works with one label and one input per div. What about two of both in one div?? TO CHECK*/
+    content: ' *';
+    color: red;
+    font-weight: 800;
+}
+
+#reservations-form input,
+textarea {
+    border: none;
+    border-radius: .3rem;
+    padding: .5rem;
+    border: .25rem solid transparent;
+}
+
+#reservations-form input:focus,
+textarea:focus {
+    border: .25rem solid #704016;
+    outline: none;
+}
+
+#client-info {
+    margin-top: .5rem;
+    padding: 10px;
+    resize: none;
+}
+
+#make-reservation__btn {
+    margin-top: 1rem;
+    padding: 10px;
+}

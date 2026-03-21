@@ -21,9 +21,9 @@
         </nav>
     </header>
     <main>
-        <section id="timetable">
+        <section id="schedule">
             <h2 class="section-title">Horario</h2>
-            <table id="schedule"> <!-- ReqH15 -->
+            <table id="timetable"> <!-- ReqH15 -->
                 <thead>
                     <th></th> <!-- To be removed on CSS implementation -->
                     <th class="schedule__day">Lunes</th>
@@ -33,7 +33,6 @@
                     <th class="schedule__day">Viernes</th>
                     <th class="schedule__day">Sábado</th>
                     <th class="schedule__day">Domingo</th>
-                </thead>
                 <tbody>
                     <tr id="morning-schedule">
                         <td>Mañanas</td>
@@ -57,19 +56,28 @@
                 </tbody>
             </table>
         </section>
+        <div class="section-divider"></div>
         <section id="reservations">
             <h2 class="section-title">Haz una reserva</h2>
             <form action="mailto:UO308921@uniovi.es?subject=Make%20a%20Reservation" method="post" id="reservations-form"> <!-- ReqH16, ReqH17 -->
-                <label for="client-name">Nombre</label>
-                <input type="text" name="name" id="client-name" required>
-                <label for="client-email">Correo</label>
-                <input type="email" name="email" id="client-email" required>
-                <label for="client-phone">Teléfono</label>
-                <input type="tel" name="telephone" id="client-phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$" required> <!-- ReqH18 -->
-                <label for="client-date">Hora y fecha</label>
-                <input type="datetime-local" name="datetime" id="client-date" required>
+                <div>
+                    <label for="client-name">Nombre</label>
+                    <input type="text" name="name" id="client-name" placeholder="Introduce tu nombre completo" required autocomplete="name">
+                </div>
+                <div>
+                    <label for="client-email">Correo</label>
+                    <input type="email" name="email" id="client-email" placeholder="Introduce un correo válido" required autocomplete="email">
+                </div>
+                <div>
+                    <label for="client-phone">Teléfono</label>
+                    <input type="tel" name="telephone" id="client-phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$" placeholder="Introduce un número español"> <!-- ReqH18 -->
+                </div>
+                <div>
+                    <label for="client-date">Hora y fecha</label>
+                    <input type="datetime-local" name="datetime" id="client-date" required>
+                </div>
                 <textarea name="client-info" id="client-info" placeholder="Escribe aquí información adicional como alérgenos"></textarea>
-                <button type="submit">Reservar</button> <!-- ReqH19 -->
+                <button type="submit" id="make-reservation__btn">Reservar</button> <!-- ReqH19 -->
             </form>
         </section>
     </main>
