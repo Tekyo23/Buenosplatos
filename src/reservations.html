@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/reservations.css">
+    <title>Reservas - Buenosplatos</title>
+</head>
+<body>
+    <header> <!-- ReqH3 -->
+        <nav id="header__nav"> <!-- ReqH9 -->
+            <a href="index.html" target="_self" class="nav__logo"><img src="../public/img/main-logo-nobg.png" alt="Logo del restaurante" height="70px"></a> <!-- ReqH9, ReqH10 -->
+            <ul id="nav__list"> <!-- ReqH14 -->
+                <li class="nav__btn"><a href="#dishes-menu" class="nav__link">La carta</a></li> <!-- ReqH11, ReqC8 -->
+                <li class="nav__btn"><a href="./reservations.html" class="nav__link">Horario</a></li>
+                <li class="nav__btn"><a href="./our-history.html" class="nav__link">Nuestra historia</a></li>
+                <li class="nav__btn"><a href="#reviews" class="nav__link">Valoraciones</a></li>
+                <li class="nav__btn"><a href="./reservations.html" class="nav__link">Haz una reserva</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="timetable">
+            <h2 class="section-title">Horario</h2>
+            <table id="schedule"> <!-- ReqH15 -->
+                <thead>
+                    <th></th> <!-- To be removed on CSS implementation -->
+                    <th class="schedule__day">Lunes</th>
+                    <th class="schedule__day">Martes</th>
+                    <th class="schedule__day">Miércoles</th>
+                    <th class="schedule__day">Jueves</th>
+                    <th class="schedule__day">Viernes</th>
+                    <th class="schedule__day">Sábado</th>
+                    <th class="schedule__day">Domingo</th>
+                </thead>
+                <tbody>
+                    <tr id="morning-schedule">
+                        <td>Mañanas</td>
+                        <td class="morning__hours">8:00 - 16:00</td>
+                        <td class="morning__hours">8:00 - 16:00</td>
+                        <td class="morning__hours">8:00 - 16:00</td>
+                        <td class="morning__hours">8:00 - 16:00</td>
+                        <td class="morning__hours">8:00 - 16:00</td>
+                        <td class="morning__hours">8:00 - 16:00</td>
+                        <td class="morning__hours">9:00 - 16:00</td>
+                    </tr>
+                    <tr id="evening-schedule">
+                        <td>Tardes</td>
+                        <td class="evening__hours">18:00 - 00:00</td>
+                        <td class="evening__hours">18:00 - 00:00</td>
+                        <td class="evening__hours">18:00 - 00:00</td>
+                        <td class="evening__hours">18:00 - 00:00</td>
+                        <td class="evening__hours" colspan="2">19:00 - 00:00</td>
+                        <td class="evening__hours">Cerrado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="reservations">
+            <h2 class="section-title">Haz una reserva</h2>
+            <form action="mailto:UO308921@uniovi.es?subject=Make%20a%20Reservation" method="post" id="reservations-form"> <!-- ReqH16, ReqH17 -->
+                <label for="client-name">Nombre</label>
+                <input type="text" name="name" id="client-name" required>
+                <label for="client-email">Correo</label>
+                <input type="email" name="email" id="client-email" required>
+                <label for="client-phone">Teléfono</label>
+                <input type="tel" name="telephone" id="client-phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$" required> <!-- ReqH18 -->
+                <label for="client-date">Hora y fecha</label>
+                <input type="datetime-local" name="datetime" id="client-date" required>
+                <textarea name="client-info" id="client-info" placeholder="Escribe aquí información adicional como alérgenos"></textarea>
+                <button type="submit">Reservar</button> <!-- ReqH19 -->
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p id="footer__copyright" class="footer__line">&copy; Buenosplatos</p>
+        <p class="footer__line"><em>Todos los derechos reservados</em></p> <!-- ReqH7 -->
+        <p class="footer__line">Llámanos al +34 000 000 000</p>
+    </footer>
+</body>
+</html>
