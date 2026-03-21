@@ -35,11 +35,15 @@ section {
     margin: auto;
 }
 
+section:first-of-type {
+    margin-top: 5rem;
+}
+
 body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    /* overflow-x: hidden; */
+    background-color: #dc9658;
 }
 
 ul { /* ReqS13 */
@@ -68,6 +72,7 @@ header {
 .section-divider {
     height: .3rem;
     width: 100%;
+    margin-block: 5rem;
     background-color: rgb(29, 29, 29);
 }
 
