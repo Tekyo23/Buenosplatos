@@ -1,3 +1,11 @@
+/* Colours' variables declaration */
+:root {
+    --main-background: #dc9658;
+    --header-footer-background: #6b2e16;
+    --preferred-white: #f7f7f7;
+}
+
+
 * {
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-family: "Noto Sans Display", sans-serif; /* Req C1 */
@@ -40,10 +48,11 @@ section:first-of-type {
 }
 
 body {
+    height: 100dvh;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-color: #dc9658;
+    background-color: var(--main-background);
 }
 
 ul { /* ReqS13 */
@@ -64,7 +73,16 @@ header {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    background: #6b2e16;
+    background: var(--header-footer-background);
+}
+
+footer {
+    background-color: var(--header-footer-background);
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:var(--preferred-white);
 }
 
 /* Class and Id Styles */
@@ -105,7 +123,7 @@ header {
     position: relative;
     display: inline-flex;
     font-weight: 700;
-    color: #f7f7f7;
+    color: var(--preferred-white);
 }
 
 .nav__link::before {
@@ -122,4 +140,8 @@ header {
 
 .nav__btn:hover > .nav__link::before { /* ReqC10, ReqC14 */
     width: 80%;
+}
+
+.footer__line {
+    margin-block: .5rem;
 }
