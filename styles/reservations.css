@@ -7,6 +7,10 @@
     border-radius: .3rem
 }
 
+#timetable > th { /* ReqC18 */
+    border-bottom: .3rem solid rgba(99, 51, 12, 0.368);
+}
+
 /* Reservations */
 #reservations-form {
     display: grid;
@@ -29,7 +33,7 @@
 }
 
 #reservations-form input,
-textarea {
+textarea { /* ReqC19 */
     border: none;
     border-radius: .3rem;
     padding: .5rem;
