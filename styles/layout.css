@@ -47,7 +47,7 @@ section:first-of-type {
     margin-top: 5rem;
 }
 
-body {
+body { /* ReqS22 */
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -68,8 +68,7 @@ ul a { /* ReqC11 */
     text-decoration: none;
 }
 
-header {
-    z-index: 1;
+header { /* ReqC6, ReqS22 */
     flex-shrink: 0;
     top: 0;
     position: sticky;
@@ -81,10 +80,10 @@ header {
     background: var(--header-footer-background);
 }
 
-footer {
+footer { /* ReqC6 */
     background-color: var(--header-footer-background);
     padding: 2rem 5rem;
-    margin-top: 10rem;
+    margin-top: 10rem; /* ReqC24 */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -93,7 +92,7 @@ footer {
 
 /* Class and Id Styles */
 
-.section-divider {
+.section-divider { /* ReqC8 */
     height: .3rem;
     width: 100%;
     margin-block: 5rem;
@@ -125,7 +124,7 @@ footer {
     gap: 4rem;
 }
 
-.nav__link {
+.nav__link { /* ReqC8 */
     position: relative;
     display: inline-flex;
     font-weight: 700;
