@@ -48,7 +48,7 @@ section:first-of-type {
 }
 
 body { /* ReqS22 */
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
