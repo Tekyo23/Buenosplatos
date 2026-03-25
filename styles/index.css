@@ -28,26 +28,30 @@ header {
     position: relative;
 }
 
-#hero-slogan::before,
-#hero-slogan::after {
+#hero-slogan__match {
+    position: inherit;
+}
+
+#hero-slogan__match::before,
+#hero-slogan__match::after {
     content: '';
     height: .2rem;
     width: 4rem;
     position: absolute;
 }
 
-#hero-slogan::before {
+#hero-slogan__match::before {
     width: 3.5rem;
     background: #fa8900;
-    right: 1.25rem;
-    top: 2.4rem;
+    right: .25rem;
+    top: 2.2rem;
     transform: rotate(-3deg);
 }
 
-#hero-slogan::after { /* Needs to be fixed */
+#hero-slogan__match::after {
     background: #2daf01;
-    right: 1rem;
-    top: 2.1rem;
+    right: 0;
+    top: 1.85rem;
     transform: rotate(-3deg);
 }
 
