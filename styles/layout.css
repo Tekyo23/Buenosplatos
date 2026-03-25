@@ -1,6 +1,7 @@
 /* Colours' variables declaration */
 :root {
     --main-background: #dc9658;
+    --main-orange: #fa8900;
     --header-footer-background: #6b2e16;
     --preferred-white: #f7f7f7;
 }
@@ -8,7 +9,7 @@
 
 * {
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    font-family: "Noto Sans Display", sans-serif; /* Req C1 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* Req C1 */
 }
 
 /* Tag Styles */
@@ -133,7 +134,7 @@ footer { /* ReqC6 */
 
 .nav__link::before {
     content: '';
-    background: #fa8900;
+    background: var(--main-orange);
     width: 0%;
     height: .2rem;
     position: absolute;
@@ -149,4 +150,23 @@ footer { /* ReqC6 */
 
 .footer__line {
     margin-block: .5rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: .5rem;
+    color: #f7f7f7;
+    font-size: 1rem;
+    background: var(--main-orange);
+    cursor: pointer;
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: #e77f00;
+}
+
+.btn:focus {
+    border: 5px solid #ffb962;
 }
