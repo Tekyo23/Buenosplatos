@@ -61,7 +61,7 @@ function validateForm() { // ReqJ5 //
     errorBox.classList.remove('visible');
 
     if (missingEntries != 0) {
-        const errorText = "Faltan los siguientes valores por rellenar: " + missingEntries.trim();
+        const errorText = "Faltan los siguientes valores por rellenar: " + missingEntries.trim().replaceAll(" ", ", ");
         errorBox.textContent = errorText;
         errorBox.classList.add('visible');
         return false;
