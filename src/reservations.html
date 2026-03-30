@@ -6,6 +6,7 @@
     <link rel="icon" href="../public/img/web-icon.ico">
     <link rel="stylesheet" href="../styles/layout.css">
     <link rel="stylesheet" href="../styles/reservations.css">
+    <script src="../scripts/reservations.js" defer></script>
     <title>Reservas - Buenosplatos</title>
 </head>
 <body>
@@ -93,26 +94,30 @@
         <div class="section-divider"></div>
         <section id="reservations">
             <h2 class="section-title">Haz una reserva</h2>
-            <form action="mailto:UO308921@uniovi.es?subject=Make%20a%20Reservation" method="post" id="reservations-form"> <!-- ReqH16, ReqH17 -->
+            <form action="mailto:UO308921@uniovi.es?subject=Make%20a%20Reservation" id="reservations-form" onsubmit="return validateForm();" novalidate method="post"> <!-- ReqH16, ReqH17 -->
                 <div>
                     <label for="client-name">Nombre</label>
-                    <input type="text" name="name" id="client-name" placeholder="Introduce tu nombre completo" required autocomplete="name">
+                    <input type="text" name="name" id="client-name" placeholder="Introduce tu nombre completo" required autocomplete="name" oninput="updatePreview()">
                 </div>
                 <div>
                     <label for="client-email">Correo</label>
-                    <input type="email" name="email" id="client-email" placeholder="Introduce un correo válido" required autocomplete="email">
+                    <input type="email" name="email" id="client-email" placeholder="Introduce un correo válido" required autocomplete="email" oninput="updatePreview(); validateInput(this)">
                 </div>
                 <div>
                     <label for="client-phone">Teléfono</label>
-                    <input type="tel" name="telephone" id="client-phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$" placeholder="Introduce un número español"> <!-- ReqH18 -->
+                    <input type="tel" name="telephone" id="client-phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$" placeholder="Introduce un número español" oninput="updatePreview(); validateInput(this)"> <!-- ReqH18 -->
                 </div>
                 <div>
                     <label for="client-date">Hora y fecha</label>
-                    <input type="datetime-local" name="datetime" id="client-date" required>
+                    <input type="datetime-local" name="datetime" id="client-date" required oninput="updatePreview()">
                 </div>
-                <textarea name="client-info" id="client-info" placeholder="Escribe aquí información adicional como alérgenos"></textarea>
-                <button type="submit" id="make-reservation__btn">Reservar</button> <!-- ReqH19 -->
+                <textarea name="client-info" id="client-info" placeholder="Escribe aquí información adicional como alérgenos" oninput="updatePreview()"></textarea>
+                <button type="submit" id="make-reservation__btn" onclick="checkCustomRules()">Reservar</button> <!-- ReqH19 -->
             </form>
+        </section>
+        <div id="error-box"></div>
+        <section id="reservation-preview">
+            <h2 class="section-title">Vista previa del contacto</h2>
         </section>
     </main>
     <footer>

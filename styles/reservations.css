@@ -55,8 +55,15 @@ textarea { /* ReqC19 */
 
 #reservations-form input:focus,
 textarea:focus {
-    border: .25rem solid #704016;
     outline: none;
+}
+
+#reservations-form .invalid {
+    border: .25rem solid rgb(255, 82, 82);
+}
+
+#reservations-form .valid {
+    border: .25rem solid rgb(95, 250, 97);
 }
 
 #client-info {
@@ -68,4 +75,22 @@ textarea:focus {
 #make-reservation__btn {
     margin-top: 1rem;
     padding: 10px;
+}
+
+#error-box {
+    color: #b00020;
+    background-color: #fce4e4;
+    border: .08rem solid #f5c2c7;
+    border-radius: .375rem;
+    font-size: .95rem;
+    padding: .625rem .9375rem;
+    margin-top: 1.75rem;
+    margin-inline: auto;
+    line-height: 1.4;
+    display: none;
+    width: 50%;
+}
+
+#error-box.visible {
+    display: block;
 }
