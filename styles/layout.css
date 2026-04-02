@@ -1,6 +1,6 @@
 /* Colours' variables declaration */
 :root {
-    --main-background: #dc9658;
+    --main-background: #ee8f4b;
     --main-orange: #fa8900;
     --header-footer-background: #6b2e16;
     --preferred-white: #f7f7f7;
@@ -62,6 +62,8 @@ body { /* ReqS22 */
 
 ul { /* ReqS13 */
     list-style: none;
+    padding-inline: 0;
+    margin-block: 0;
 }
 
 ul a { /* ReqC11 */
@@ -125,7 +127,7 @@ footer { /* ReqC6 */
     gap: 4rem;
 }
 
-.nav__link { /* ReqC8 */
+.link { /* ReqC8 */
     position: relative;
     display: inline-flex;
     font-weight: 700;
@@ -146,6 +148,11 @@ footer { /* ReqC6 */
 
 .nav__btn:hover > .nav__link::before { /* ReqC10, ReqC14 */
     width: 80%;
+}
+
+#ham-menu,
+.ham-btn {
+    display: none;
 }
 
 .footer__line {
@@ -169,4 +176,86 @@ footer { /* ReqC6 */
 
 .btn:focus {
     border: 5px solid #ffb962;
+}
+
+@media (max-width: 1034px) {
+    #header__nav {
+        padding-inline: 2.5rem;
+    }
+
+    #nav__list {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 860px) {
+    #nav__list {
+        display: none;
+    }
+
+    #ham-menu__header {
+        display: block;
+    }
+
+    .ham-btn {
+        display: inline;
+    }
+
+    .ham-btn {
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    #ham-menu {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        height: 100%;
+        width: 28.25rem;
+        padding: 3rem 4rem;
+        background: var(--main-background);
+        box-shadow: -5px 1px 36px -6px rgba(0,0,0,0.37);
+        -webkit-box-shadow: -5px 1px 36px -6px rgba(0,0,0,0.37);
+        -moz-box-shadow: -5px 1px 36px -6px rgba(0,0,0,0.37);
+        text-wrap: nowrap; 
+        transition: .6s ease-in-out;
+    }
+
+    .off-screen {
+        width: 0;
+        transform: translateX(100%);
+        overflow: hidden;
+    }
+
+    #ham-menu__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ham-menu__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.5rem;
+    }
+
+    .ham-menu__link {
+        font-size: 1.75rem;
+        margin-bottom: .75rem;
+    }
+
+    #ham-menu__copyright {
+        color: var(--preferred-white);
+    }
+}
+
+@media (max-width: 560px) {
+    #ham-menu {
+        width: 100dvw;
+    }
 }
