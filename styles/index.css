@@ -89,6 +89,7 @@ header {
 }
 
 .menu-item__name {
+    font-size: 1.25rem;
     margin: 0;
     margin-bottom: .75rem;
 }
