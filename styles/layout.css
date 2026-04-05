@@ -189,6 +189,10 @@ footer { /* ReqC6 */
 }
 
 @media (max-width: 860px) {
+    h1 {
+        font-size: 6rem;
+    }
+
     #nav__list {
         display: none;
     }
@@ -254,7 +258,17 @@ footer { /* ReqC6 */
     }
 }
 
+@media (max-width: 690px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
 @media (max-width: 560px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
     #ham-menu {
         width: 100dvw;
     }
