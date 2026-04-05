@@ -11,17 +11,21 @@
 
 #timetable th { /* ReqC18 */
     border-bottom: .3rem solid rgba(99, 51, 12, 0.9);
-    padding-bottom: .3rem;
+    padding-bottom: .6rem;
 }
 
 #timetable tr:first-child > td {
     border-bottom: .3rem solid rgba(99, 51, 12, 0.9);
-    padding-bottom: .3rem;
+    padding-bottom: .6rem;
 }
 
  #timetable  p {
     margin: 0;
     font-size: medium;
+ }
+
+ .schedule__day {
+    padding-left: .5rem;
  }
 
 /* Reservations */
@@ -95,4 +99,28 @@ textarea:focus {
 
 #error-box.visible {
     display: block;
+}
+
+@media (max-width: 675px) {
+    .schedule__day {
+        padding-left: .35rem;
+    }
+    #timetable,
+    #timetable p {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 625px) {
+    #timetable,
+    #timetable p {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 565px) {
+    #timetable,
+    #timetable p {
+        font-size: .73rem;
+    }
 }
