@@ -94,6 +94,34 @@ header {
     margin-bottom: .75rem;
 }
 
+.menu-item__allergens {
+    border: none;
+    border-radius: 10px;
+    padding-inline: 1.5rem;
+    background-color: var(--preferred-white);
+    box-shadow: 0 4px 10px rgba(0 , 0, 0, 0.1);
+}
+
+.allergens__header {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.allergens__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 56px);
+    gap: 0.75rem;
+}
+
+.allergen__item {
+    text-align: center;
+}
+
+.allergen__item::after {
+  content: attr(data-allergen);
+  font-size: 0.95rem;
+}
+
 @media (max-width: 690px) {
     #hero-slogan {
         font-size: 1.25rem;  
