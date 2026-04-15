@@ -10,7 +10,7 @@ header {
     height: calc(100dvh - 110px);
     margin: 0;
     width: 100%;
-    background: url("../public/img/hero-background\ -\ Edited.jpg");
+    background: url("/public/img/hero-background\ -\ Edited.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
