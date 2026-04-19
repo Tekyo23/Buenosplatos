@@ -1,4 +1,4 @@
-applyTranslations(getSavedLocale());
+initializeI8n();
 "use strict";
 
 function applyTranslations(locale) {
@@ -64,4 +64,5 @@ function initializeI8n() {
 
     const initialLocale = getSavedLocale();
     applyTranslations(initialLocale);
+    initializeLanguageSwitcher(initialLocale);
 }
