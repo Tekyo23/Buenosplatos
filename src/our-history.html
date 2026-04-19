@@ -6,6 +6,8 @@
     <link rel="icon" href="/public/img/web-icon.ico">
     <link rel="stylesheet" href="./styles/layout.css">
     <script src="/scripts/layout.js" defer></script>
+    <script src="/scripts/i18n/translations.js" defer></script>
+    <script src="/scripts/i18n/i18n.js" defer></script>
     <title>Nuestra historia - Buenosplatos</title>
 </head>
 <body>
@@ -18,6 +20,14 @@
                 <li class="nav__btn"><a href="/src/our-history.html#our-history" class="nav__link link" data-i18n="navigation-history">Nuestra historia</a></li>
                 <li class="nav__btn"><a href="/src/our-history.html#reviews" class="nav__link link" data-i18n="navigation-reviews">Valoraciones</a></li>
                 <li class="nav__btn"><a href="/src/reservations.html#reservations" class="nav__link link" data-i18n="navigation-reservation">Haz una reserva</a></li>
+                <li>
+                    <div class="language-box">
+                        <select id="language-switcher" onchange="setLocale(this.value)">
+                            <option value="es" data-i18n="language-spanish">Español</option>
+                            <option value="en" data-i18n="language-english">English</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
             <button class="ham-btn ham-btn--open">
                 <img src="/public/icons/hamburger-menu-open.svg" alt="Open hamburger menu" height="48" onclick="openHamMenu()">

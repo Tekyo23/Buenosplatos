@@ -7,10 +7,11 @@ window.translations = {
     'navigation-history': 'Nuestra historia',
     'navigation-reviews': 'Valoraciones',
     'navigation-reservation': 'Haz una reserva',
+    'language-spanish': 'Español',
+    'language-english': 'Inglés',
 
     'hero-title': 'Buenosplatos',
-    'hero-slogan': 'Donde tu paladar siempre hace ',
-    'hero-slogan__match': 'match',
+    'hero-slogan': 'Donde tu paladar siempre hace <em id="hero-slogan__match">match</em>',
 
     'section-menu': 'La carta',
 
@@ -40,10 +41,13 @@ window.translations = {
 
     'section-reservations': 'Haz una reserva',
     'form-name': 'Nombre',
+    'form-name-placeholder': 'Introduce tu nombre completo',
     'form-email': 'Correo',
+    'form-name-placeholder': 'Introduce un correo válido',
     'form-phone': 'Teléfono',
+    'form-name-placeholder': 'Introduce un número español',
     'form-date': 'Hora y fecha',
-    'form-extra': 'Escribe aquí información adicional como alérgenos',
+    'form-extra-placeholder': 'Escribe aquí información adicional como alérgenos',
     'form-submit': 'Reservar',
 
     'section-preview': 'Vista previa del contacto',
@@ -60,10 +64,11 @@ window.translations = {
     'navigation-history': 'Our history',
     'navigation-reviews': 'Reviews',
     'navigation-reservation': 'Make a reservation',
+    'language-spanish': 'Spanish',
+    'language-english': 'English',
 
     'hero-title': 'Buenosplatos',
-    'hero-slogan': 'Where your palate always finds a ',
-    'hero-slogan__match': 'match',
+    'hero-slogan': 'Where your palate always finds a <em id="hero-slogan__match">match</em>',
 
     'section-menu': 'Menu',
 
@@ -93,11 +98,14 @@ window.translations = {
 
     'section-reservations': 'Make a reservation',
     'form-name': 'Name',
+    'form-name-placeholder': 'Write your full name',
     'form-email': 'Email',
+    'form-email-placeholder': 'Write a valid email',
     'form-phone': 'Phone',
+    'form-phone-placeholder': 'Write a Spanish phone number',
     'form-date': 'Date and time',
-    'form-extra': 'Write additional information such as allergens here',
-    'form-submit': 'Reserve',
+    'form-extra-placeholder': 'Write additional information such as allergens here',
+    'form-submit': 'Book',
 
     'section-preview': 'Contact preview',
 

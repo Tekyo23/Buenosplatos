@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./styles/reservations.css">
     <script src="/scripts/layout.js" defer></script>
     <script src="/scripts/reservations.js" defer></script>
+    <script src="/scripts/i18n/translations.js" defer></script>
+    <script src="/scripts/i18n/i18n.js" defer></script>
     <title>Reservas - Buenosplatos</title>
 </head>
 <body>
@@ -20,6 +22,14 @@
                 <li class="nav__btn"><a href="/src/our-history.html#our-history" class="nav__link link" data-i18n="navigation-history">Nuestra historia</a></li>
                 <li class="nav__btn"><a href="/src/our-history.html#reviews" class="nav__link link" data-i18n="navigation-reviews">Valoraciones</a></li>
                 <li class="nav__btn"><a href="/src/reservations.html#reservations" class="nav__link link" data-i18n="navigation-reservation">Haz una reserva</a></li>
+                <li>
+                    <div class="language-box">
+                        <select id="language-switcher" onchange="setLocale(this.value)">
+                            <option value="es" data-i18n="language-spanish">Español</option>
+                            <option value="en" data-i18n="language-english">English</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
             <button class="ham-btn ham-btn--open">
                 <img src="/public/icons/hamburger-menu-open.svg" alt="Open hamburger menu" height="48" onclick="openHamMenu()">
@@ -117,21 +127,21 @@
             <form action="mailto:UO308921@uniovi.es?subject=Make%20a%20Reservation" id="reservations-form" onsubmit="return validateForm();" novalidate method="post"> <!-- ReqH16, ReqH17 -->
                 <div>
                     <label for="client-name" data-i18n="form-name">Nombre</label>
-                    <input type="text" name="name" id="client-name" placeholder="Introduce tu nombre completo" required autocomplete="name" oninput="updatePreview()">
+                    <input type="text" name="name" id="client-name" data-i18n-placeholder="form-name-placeholder" placeholder="Introduce tu nombre completo" required autocomplete="name" oninput="updatePreview()">
                 </div>
                 <div>
                     <label for="client-email" data-i18n="form-email">Correo</label>
-                    <input type="email" name="email" id="client-email" placeholder="Introduce un correo válido" required autocomplete="email" oninput="updatePreview(); validateInput(this)">
+                    <input type="email" name="email" id="client-email" data-i18n-placeholder="form-email-placeholder" placeholder="Introduce un correo válido" required autocomplete="email" oninput="updatePreview(); validateInput(this)">
                 </div>
                 <div>
                     <label for="client-phone" data-i18n="form-phone">Teléfono</label>
-                    <input type="tel" name="telephone" id="client-phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$" placeholder="Introduce un número español" oninput="updatePreview(); validateInput(this)"> <!-- ReqH18 -->
+                    <input type="tel" name="telephone" id="client-phone" pattern="^(\+34|0034|34)?[67][0-9]{8}$" data-i18n-placeholder="form-phone-placeholder" placeholder="Introduce un número español" oninput="updatePreview(); validateInput(this)"> <!-- ReqH18 -->
                 </div>
                 <div>
                     <label for="client-date" data-i18n="form-date">Hora y fecha</label>
                     <input type="datetime-local" name="date" id="client-date" required oninput="updatePreview()">
                 </div>
-                <textarea name="client-info" id="client-info" data-i18n="form-extra" placeholder="Escribe aquí información adicional como alérgenos" oninput="updatePreview()"></textarea>
+                <textarea name="client-info" id="client-info" data-i18n-placeholder="form-extra-placeholder" placeholder="Escribe aquí información adicional como alérgenos" oninput="updatePreview()"></textarea>
                 <button type="submit" id="make-reservation__btn" onclick="checkCustomRules()" data-i18n="form-submit">Reservar</button> <!-- ReqH19 -->
             </form>
             <div id="error-box"></div>

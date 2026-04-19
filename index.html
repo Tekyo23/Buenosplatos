@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./src/styles/index.css">
     <script src="/scripts/layout.js" defer></script>
     <script src="/scripts/index.js" defer></script>
+    <script src="/scripts/i18n/translations.js" defer></script>
+    <script src="/scripts/i18n/i18n.js" defer></script>
     <title data-i18n="site-title">Buenosplatos - Restaurante</title>
 </head>
 <body>
@@ -24,6 +26,14 @@
                 <li class="nav__btn"><a href="/src/our-history.html#our-history" class="nav__link link" data-i18n="navigation-history">Nuestra historia</a></li>
                 <li class="nav__btn"><a href="/src/our-history.html#reviews" class="nav__link link" data-i18n="navigation-reviews">Valoraciones</a></li>
                 <li class="nav__btn"><a href="/src/reservations.html#reservations" class="nav__link link" data-i18n="navigation-reservation">Haz una reserva</a></li>
+                <li>
+                    <div class="language-box">
+                        <select id="language-switcher" onchange="setLocale(this.value)">
+                            <option value="es" data-i18n="language-spanish">Español</option>
+                            <option value="en" data-i18n="language-english">English</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
             <button class="ham-btn ham-btn--open">
                 <img src="/public/icons/hamburger-menu-open.svg" alt="Open hamburger menu" height="48" onclick="openHamMenu()">
@@ -49,7 +59,7 @@
     <main> <!-- ReqH4 -->
         <section id="hero" class="full-width-section">
             <h1 id="hero-name" data-i18n="hero-title">Buenosplatos</h1>
-            <p id="hero-slogan" data-i18n="hero-slogan">Donde tu paladar siempre hace <em id="hero-slogan__match" data-i18n="hero-slogan__match">match</em></p>
+            <p id="hero-slogan" data-i18n="hero-slogan">Donde tu paladar siempre hace <em id="hero-slogan__match">match</em></p>
         </section>
         <div class="section-divider"></div> <!-- ReqC6 -->
         <section id="dishes-menu">
