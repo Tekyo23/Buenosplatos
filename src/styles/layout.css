@@ -157,6 +157,7 @@ footer { /* ReqC6 */
     font-size: 1.10rem;
     font-weight: 700;
     text-align: center;
+    cursor: pointer;
 }
 
 .language-option {
