@@ -3,6 +3,7 @@ initializeI8n();
 
 function applyTranslations(locale) {
     const translatableElements = document.querySelectorAll("[data-i18n]");
+    console.log(translatableElements);
     const labelElements = document.querySelectorAll("[data-i18n-label]");
     const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]");
     const dict = window.translations?.[locale];
@@ -65,4 +66,17 @@ function initializeI8n() {
     const initialLocale = getSavedLocale();
     applyTranslations(initialLocale);
     initializeLanguageSwitcher(initialLocale);
+}
+
+function formatDate(dateValue, locale) {
+    try {
+        const resolvedLocale = locale === 'en' ? 'en-US' : 'es-ES';
+        return new Intl.DateTimeFormat(resolvedLocale, {
+            dateStyle: 'long',
+            timeStyle: 'short'
+        }).format(dateValue);
+    } catch (error) {
+        console.error("The date is not completed");
+        return "";
+    }
 }

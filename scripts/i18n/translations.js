@@ -50,7 +50,12 @@ window.translations = {
     'form-extra-placeholder': 'Escribe aquí información adicional como alérgenos',
     'form-submit': 'Reservar',
 
-    'section-preview': 'Vista previa del contacto',
+    'contact-preview-title': 'Vista previa del contacto',
+    'contact-preview-name': 'Nombre: ',
+    'contact-preview-email': 'Correo electrónico: ',
+    'contact-preview-phone': 'Teléfono de contacto: ',
+    'contact-preview-date': 'Fecha: ',
+    'contact-preview-allergens': 'Alérgenos: ',
 
     'footer-rights': 'Todos los derechos reservados',
     'footer-contact': 'Llámanos al +34 000 000 000'
@@ -107,7 +112,12 @@ window.translations = {
     'form-extra-placeholder': 'Write additional information such as allergens here',
     'form-submit': 'Book',
 
-    'section-preview': 'Contact preview',
+    'contact-preview-title': 'Contact preview',
+    'contact-preview-name': 'Name: ',
+    'contact-preview-email': 'Email: ',
+    'contact-preview-phone': 'Phone number: ',
+    'contact-preview-date': 'Date: ',
+    'contact-preview-allergens': 'Allergens: ',
 
     'footer-rights': 'All rights reserved',
     'footer-contact': 'Call us at +34 000 000 000'
