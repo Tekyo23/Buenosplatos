@@ -15,7 +15,7 @@ function updatePreview() { // ReqJ2 //
     const preview = document.querySelector('#reservation-preview');
 
     preview.innerHTML = `
-    <h2 class="section-title" data-i18n="contact-preview-title">Vista previa de contacto</h2>
+    <h2 class="section-title" data-i18n="contact-preview-title">Vista previa del contacto</h2>
     <p><strong  data-i18n="contact-preview-name">Nombre: </strong>${name}</p>    
     <p><strong data-i18n="contact-preview-email">Correo electrónico: </strong>${email}</p>
     <p><strong data-i18n="contact-preview-phone">Teléfono de contacto: </strong>${phone}</p>
