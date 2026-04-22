@@ -79,9 +79,12 @@ header {
 }
 
 .menu-item__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
     word-wrap: break-word;
     padding: 1.25rem;
-    align-self: flex-end;
 }
 
 .menu-item__body > p {
@@ -92,6 +95,10 @@ header {
     font-size: 1.25rem;
     margin: 0;
     margin-bottom: .75rem;
+}
+
+.menu-item__description {
+    flex-grow: 1 ;
 }
 
 .menu-item__allergens {

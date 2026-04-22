@@ -10,19 +10,17 @@ function updatePreview() { // ReqJ2 //
     const name = document.querySelector('#client-name').value;
     const email = document.querySelector('#client-email').value;
     const phone = document.querySelector('#client-phone').value;
-    const date = document.querySelector('#client-date').value;
-    const newDate = new Date(date).toString();
+    const date = new Date(document.querySelector('#client-date').value);
     const alergens = document.querySelector('#client-info').value;
-
     const preview = document.querySelector('#reservation-preview');
 
     preview.innerHTML = `
-    <h2 class="section-title">Vista previa de contacto</h2>
-    <p><strong>Nombre: </strong>${name}</p>    
-    <p><strong>Correo electrónico: </strong>${email}</p>
-    <p><strong>Teléfono de contacto: </strong>${phone}</p>
-    <p><strong>Fecha: </strong>${newDate}</p>
-    <p><strong>Alérgenos: </strong> ${alergens}</p>
+    <h2 class="section-title" data-i18n="contact-preview-title">Vista previa de contacto</h2>
+    <p><strong  data-i18n="contact-preview-name">Nombre: </strong>${name}</p>    
+    <p><strong data-i18n="contact-preview-email">Correo electrónico: </strong>${email}</p>
+    <p><strong data-i18n="contact-preview-phone">Teléfono de contacto: </strong>${phone}</p>
+    <p><strong data-i18n="contact-preview-date">Fecha: </strong>${formatDate(date, getSavedLocale())}</p>
+    <p><strong data-i18n="contact-preview-allergens">Alérgenos: </strong> ${alergens}</p>
     `
 }
 

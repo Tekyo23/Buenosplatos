@@ -150,6 +150,22 @@ footer { /* ReqC6 */
     width: 80%;
 }
 
+#language-switcher {
+    background: none;
+    border: none;
+    color: var(--preferred-white);
+    font-size: 1.10rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+
+.language-option {
+    font-size: 1.10rem;
+    font-weight: 700;
+    color: #000;
+}
+
 #ham-menu,
 .ham-btn {
     display: none;
@@ -178,7 +194,7 @@ footer { /* ReqC6 */
     border: 5px solid #ffb962;
 }
 
-@media (max-width: 1034px) {
+@media (max-width: 1175px) {
     #header__nav {
         padding-inline: 2.5rem;
     }
@@ -188,7 +204,7 @@ footer { /* ReqC6 */
     }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 970px) {
     h1 {
         font-size: 6rem;
     }
