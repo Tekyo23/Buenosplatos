@@ -1,4 +1,16 @@
 const form = document.querySelector('#reservations-form');
+const previewEntries = document.querySelectorAll('#reservation-preview .preview-entry');
+const nameField = document.querySelector('#client-name');
+const emailField = document.querySelector('#client-email');
+const phoneField = document.querySelector('#client-phone');
+const dateField = document.querySelector('#client-date');
+const allergensField = document.querySelector('#client-info');
+const previewNameValue = document.querySelector('#contact-preview-name-value');
+const previewEmailValue = document.querySelector('#contact-preview-email-value');
+const previewPhoneValue = document.querySelector('#contact-preview-phone-value');
+const previewDateValue = document.querySelector('#contact-preview-date-value');
+const previewAllergensValue = document.querySelector('#contact-preview-allergens-value');
+let previewActivated = false;
 
 if (!form) { // ReqJ1 //
     console.log("No form has been detected")
@@ -7,21 +19,30 @@ if (!form) { // ReqJ1 //
 
 
 function updatePreview() { // ReqJ2 //
-    const name = document.querySelector('#client-name').value;
-    const email = document.querySelector('#client-email').value;
-    const phone = document.querySelector('#client-phone').value;
-    const date = new Date(document.querySelector('#client-date').value);
-    const alergens = document.querySelector('#client-info').value;
-    const preview = document.querySelector('#reservation-preview');
+    const dict = window.translations?.[getSavedLocale()];
 
-    preview.innerHTML = `
-    <h2 class="section-title" data-i18n="contact-preview-title">Vista previa del contacto</h2>
-    <p><strong  data-i18n="contact-preview-name">Nombre: </strong>${name}</p>    
-    <p><strong data-i18n="contact-preview-email">Correo electrónico: </strong>${email}</p>
-    <p><strong data-i18n="contact-preview-phone">Teléfono de contacto: </strong>${phone}</p>
-    <p><strong data-i18n="contact-preview-date">Fecha: </strong>${formatDate(date, getSavedLocale())}</p>
-    <p><strong data-i18n="contact-preview-allergens">Alérgenos: </strong> ${alergens}</p>
-    `
+    const hasPreviewContent = [
+        nameField.value,
+        emailField.value,
+        phoneField.value,
+        dateField.value,
+        allergensField.value
+    ].some(value => value.trim() !== '');
+
+    if (hasPreviewContent && !previewActivated) {
+        previewActivated = true;
+        previewEntries.forEach(entry => entry.classList.remove('is-hidden'));
+    }
+
+    if (!previewActivated) {
+        return;
+    }
+
+    previewNameValue.textContent = nameField.value;
+    previewEmailValue.textContent = emailField.value;
+    previewPhoneValue.textContent = phoneField.value;
+    previewDateValue.textContent = dateField.value ? formatDate(new Date(dateField.value), getSavedLocale()) : '';
+    previewAllergensValue.textContent = allergensField.value;
 }
 
 function validateInput(field) { // ReqJ3 //

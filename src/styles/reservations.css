@@ -81,6 +81,10 @@ textarea:focus {
     padding: 10px;
 }
 
+#reservation-preview .preview-entry.is-hidden {
+    display: none;
+}
+
 #error-box {
     color: #b00020;
     background-color: #fce4e4;
