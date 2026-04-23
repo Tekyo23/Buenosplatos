@@ -68,6 +68,7 @@ function initializeI8n() {
     initializeLanguageSwitcher(initialLocale);
 }
 
+let dateErrorCount = 0;
 function formatDate(dateValue, locale) {
     try {
         const resolvedLocale = locale === 'en' ? 'en-US' : 'es-ES';
@@ -76,7 +77,9 @@ function formatDate(dateValue, locale) {
             timeStyle: 'short'
         }).format(dateValue);
     } catch (error) {
-        console.error("The date is not completed");
+        dateErrorCount++;
+        let errorMessage = "The date is not completed";
+        console.error(errorMessage + `(${dateErrorCount})`);
         return "";
     }
 }
